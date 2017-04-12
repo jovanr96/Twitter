@@ -53,6 +53,6 @@ public class TwitterPoruka {
 	 * Metoda koja vraca naziv korisnika i kontekst poruke.
 	 */
 	public String toString() {
-		return "KORISNIK:" + korisnik + " PORUKA:" + poruka;
+		return "KORISNIK: " + korisnik + " PORUKA:" + poruka;
 	}
 }
