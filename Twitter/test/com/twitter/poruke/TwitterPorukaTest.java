@@ -57,7 +57,7 @@ public class TwitterPorukaTest {
 	 */
 	@Test
 	public void testSetPoruka() {
-		String p = "Ovo je sadrzaj poruke.";
+		String p = "Poruka";
 		tp.setPoruka(p);
 		assertEquals(p, tp.getPoruka());
 	}
@@ -71,9 +71,18 @@ public class TwitterPorukaTest {
 	}
 	@Test (expected = java.lang.RuntimeException.class)
 	public void testSetPorukaViseKaraktera() {
-		String p = new String();
-		for (int i = 0; i < 140; i++)
-			p += "i";
+		String p = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+				+ "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+				+ "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+				+ "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+				+ "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+				+ "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+				+ "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+				+ "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+				+ "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+				+ "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+				+ "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+				+ "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii";
 		tp.setPoruka(p);
 	}
 	/**
@@ -83,7 +92,7 @@ public class TwitterPorukaTest {
 	public void testToString() {
 		tp.setKorisnik("korisnik");
 		tp.setPoruka("poruka");
-		assertEquals("KORISNIK: korisnik PORUKA: poruka", tp.toString());
+		assertEquals("KORISNIK:korisnik PORUKA:poruka", tp.toString());
 	}
 
 }
